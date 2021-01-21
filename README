@@ -1,0 +1,32 @@
+
+
+[nix-shell:~/scrat]$ git diff --cached
+diff --git a/test.py b/test.py
+index 1d11b5a..d635de7 100644
+--- a/test.py
++++ b/test.py
+@@ -3,6 +3,7 @@ import foo
+ 
+ def main():
+     print "hi"
++    boo()
+ 
+ 
+ def boo():
+
+[nix-shell:~/scrat]$ git diff
+
+[nix-shell:~/scrat]$ git diff ^C
+
+[nix-shell:~/scrat]$ cat test.py
+import foo
+
+
+def main():
+	print "hi"
+        boo()
+
+def boo():
+	print "there"
+
+
